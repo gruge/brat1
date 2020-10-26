@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html"; charset=utf-8">
+<title>Bootstrap page</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+<body>
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p class="bg-secondary text-light"> Obama 1 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p class="bg-primary text-light"> Hussein 2 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p> Barrack 3 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p> Putin 4 </p></div>
+	</div>
+</div> -->
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<script language="javascript" src="js/jquery-3.5.1.slim.min.js" ></script>
+<script language="javascript" src="js/popper.min.js" ></script>
+<script language="javascript" src="js/bootstrap.min.js" ></script>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+ 
+ <h1 style="text-align: center;">Лазерный излучатель KY-008</h1>
+ <div class="row">
+      <div class="col-12">
+        <span>
+        <h3>Описание</h3>
+        Это устройство Keyes - одно из наиболее распространенных 
+		устройств в наборах датчиков Arduino. В сочетании с другими 
+		компонентами его можно использовать для создания растяжек 
+		или оптических эффектов. KY-008 особенно удобен, потому что
+		он может питаться напрямую от выходного контакта Arduino, 
+		поскольку он потребляет только 30 мА от процессора, который имеет 
+		выходы, рассчитанные на 40 мА.<br/>
+<a href="http://scrumpoker.eu/%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/arduino/%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D0%B5%D0%B9-arduino/%D0%BB%D0%B0%D0%B7%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D0%B8%D0%B7%D0%BB%D1%83%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C-laser-emiter/">
+      Открыть оригинал</a>
+        </span>
+      </div>
+    </div>
+	
+	<div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <h3>Схема подключения</h3>
+          <img src="blueprint2.jpg" width="50%">
+        </div>
+        
+        <div class="col-lg-6 col-sm-12">
+        <h3>Код подключения</h3>
+        <div>
+          <table>
+           int laserPin = 10;<br/>
+void setup ()<br/>
+{<br/>
+pinMode (laserPin, OUTPUT); // define the digital output interface 13 feet<br/>
+}<br/>
+void loop () {<br/>
+laserEmiter(laserPin,15,5);<br/>
+}<br/>
+void laserEmiter(int laserPin,int timeToBurn,int timeToRest){//made by Ilja Kazantsev<br/>
+digitalWrite (laserPin, HIGH); // Turn Laser On<br/>
+delay (timeToBurn);// delay while it burns<br/>
+digitalWrite (laserPin, LOW); // Turn Laser Off<br/>
+delay (timeToRest);//delay till new cicle<br/>
+}<br/>
+<br/>
+void setup ()<br/>
+{<br/>
+pinMode (laserPin, OUTPUT); // define the digital output interface 13 feet<br/>
+}<br/>
+void loop () {<br/>
+laserEmiter(laserPin,15,5);<br/>
+}<br/>
+void laserEmiter(int laserPin,int timeToBurn,int timeToRest){//made by Ilja Kazantsev<br/>
+digitalWrite (laserPin, HIGH); // Turn Laser On<br/>
+delay (timeToBurn);// delay while it burns<br/>
+digitalWrite (laserPin, LOW); // Turn Laser Off<br/>
+delay (timeToRest);//delay till new cicle<br/>
+}<br/>
+          </table>
+        </div>
+      </div>
+    </div>
+	
+</body>
+</html>

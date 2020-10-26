@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html"; charset=utf-8">
+<title>Bootstrap page</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+<body>
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p class="bg-secondary text-light"> Obama 1 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p class="bg-primary text-light"> Hussein 2 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p> Barrack 3 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p> Putin 4 </p></div>
+	</div>
+</div> -->
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<script language="javascript" src="js/jquery-3.5.1.slim.min.js" ></script>
+<script language="javascript" src="js/popper.min.js" ></script>
+<script language="javascript" src="js/bootstrap.min.js" ></script>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+ 
+ <h1 style="text-align: center;">Датчик для избегания препятствий KY-032</h1>
+ <div class="row">
+      <div class="col-12">
+        <span>
+        <h3>Описание</h3>
+          “KY-032” – модуль представляет собой инфракрасный датчик 
+          обнаружения препятствий. Устройство имеет передатчик (IR LED), 
+          излучающий инфракрасный луч частотой 38 кГц, который принимается 
+          приемником (IR receiver) на плате. При приближении какого-либо 
+          предмета к сенсору (близость регулируется потенциометром) на выходе
+          “OUT” появляется низкий уровень напряжения и включается светодиод на плате модуля.
+		  	<div>
+      <a href="http://scrumpoker.eu/arduino/avoidanceSensor.php">Открыть оригинал</a>
+    </div>
+        </span>
+      </div>
+    </div>
+	
+	<div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <h3>Схема подключения</h3>
+          <img src="blueprint1.jpg" width="50%">
+        </div>
+        
+        <div class="col-lg-6 col-sm-12">
+        <h3>Код подключения</h3>
+        <div>
+          <table>
+            digitalWrite( enablePin, HIGH);     //Включить внутренний сигнал 38 кГц <br>
+            microDelay( 210);                   //Задержка 210µs(8 пульсов по 38kHz) <br>
+            if( digitalRead( outputPin))        //Если Output детектора равен HIGH <br>
+            { <br>
+            objectDetect = false;           //Препятсвия не было найдено <br>
+            } <br>
+            else                                //Но если Output равен LOW, <br>
+            { <br>
+            microDelay( 395);               //Опять ждать 15 пульсов <br>
+            if( digitalRead( outputPin))    //Если Output теперь равен HIGH <br>
+            { <br>
+            objectDetect = false;       //Препятсвия не было найдено <br>
+            } <br>
+              else                            //Если Output до сих пор LOW <br>
+            { <br>
+             objectDetect = true;        //Препятсвие било обнаружено <br>
+            } <br>
+            } <br>
+            digitalWrite( enablePin, LOW);      //Выключить внутренний сигнал 38kHz <br>
+          </table>
+        </div>
+      </div>
+    </div>
+	
+</body>
+</html>

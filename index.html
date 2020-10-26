@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html"; charset=utf-8">
+<title>Bootstrap page</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+<body>
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p class="bg-secondary text-light"> Obama 1 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p class="bg-primary text-light"> Hussein 2 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p> Barrack 3 </p></div>
+		<div class="col-12 col-xl-3 col-lg-4 col-md-6"><p> Putin 4 </p></div>
+	</div>
+</div> -->
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<script language="javascript" src="js/jquery-3.5.1.slim.min.js" ></script>
+<script language="javascript" src="js/popper.min.js" ></script>
+<script language="javascript" src="js/bootstrap.min.js" ></script>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue;">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+ 
+	<div class="container">
+ <div class="row">
+ <div class="col-12 col-xl-4 col-lg-4 col-md-6">
+ <div class="card" style="width: 100%;">
+  <img class="card-img-top" src="walk1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Датчик для избегания препятствий KY-032</h5>
+    <p class="card-text"></p>
+    <a href="page1.html" class="btn btn-primary">Подробнее</a>
+  </div>
+</div>
+</div>
+
+ <div class="col-12 col-xl-4 col-lg-4 col-md-6">
+ <div class="card" style="width: 100%;">
+  <img class="card-img-top" src="walk2.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Лазерный излучатель Laser Emiter</h5>
+    <p class="card-text"></p>
+    <a href="page2.html" class="btn btn-primary">Подробнее</a>
+  </div>
+</div>
+</div>
+
+ <div class="col-12 col-xl-4 col-lg-4 col-md-6">
+ <div class="card" style="width: 100%;">
+  <img class="card-img-top" src="walk3.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Простой датчик вибрации</h5>
+    <p class="card-text"></p>
+    <a href="page3.html" class="btn btn-primary">Подробнее</a>
+  </div>
+</div>
+</div>
+	</div>
+	
+</body>
+</html>
